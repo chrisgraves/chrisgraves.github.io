@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting…</title>
+  <script>
+    (function () {
+      var path = location.pathname;
+      if (path === '/st3' || path.indexOf('/st3/') === 0) {
+        sessionStorage.setItem('redirect', path);
+        location.replace('/st3/');
+      } else {
+        location.replace('/');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting…</p>
+</body>
+</html>
